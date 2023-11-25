@@ -1,5 +1,6 @@
 console.log('***** Music Collection *****')
 // Safe Zone -- Write code below this line
+console.log('========== ADD TO COLLECTION FUNCTION ==========')
 let myCollection=[]; // an array of objects
 
 function addToCollection(collection, title, artist, yearPublished){
@@ -12,7 +13,7 @@ function addToCollection(collection, title, artist, yearPublished){
   return collection; // return newly created object
 }
 
-console.log('========== addToCollection TEST ==========')
+console.log('!!!!! addToCollection TEST !!!!!');
 let sikKObject;
 console.log(addToCollection(sikKObject, 'HEADLINER', 'SIK-K', 2020));
 let btsObject;
@@ -27,6 +28,23 @@ let winnerObject;
 console.log(addToCollection(winnerObject, '2014 S/S', 'Winner', '2014'));
 console.log('LOG OF myCollection ARRAY:', myCollection);
 
+console.log('========== SHOW COLLECTION FUNCTION ==========')
+/* Create a function named showCollection. This function should:
+
+Take in a collection parameter. (This allows it to be reused to show any array of album objects.)
+Loop through the collection and console.log each album's information formatted within a single string, like: TITLE by ARTIST, published in YEAR. */
+
+
+function showCollection(anArray){
+  //loop through an array
+  let newString = "";
+  for(i=0; i<anArray.length; i++){
+    // console.log('IN SHOW COLLECTION FOR LOOP');
+    let collection = anArray[i];
+    let newString = console.log(collection.title + ' by ' + collection.artist + ', ' + 'published in ' + collection.yearPublished); 
+  }
+  return newString;
+}
 
 
 
