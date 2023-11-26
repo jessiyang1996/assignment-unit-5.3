@@ -61,37 +61,20 @@ console.log('========== FIND BY ARTIST FUNCTION ==========')
 //make the function for find the artist
 function findByArtist(collectionArray, artist){
   console.log('IN FIND BY ARTIST FUNCTION');
-  let albumList = [] // this is where the album by artist will be stored
+  let foundAlbumList = [] // this is where the album by artist will be stored
   for(i=0; i<collectionArray.length; i++){
     if(collectionArray[i].artist === artist){
-      albumList.push(collectionArray[i]);
-      return albumList;
-    } else{
-      return albumList;
+      foundAlbumList.push(collectionArray[i]);
     } // end of if-else statement
   } // end of for loop
+  return foundAlbumList;
 } // end of findByArtist function
 
 console.log('=========FIND BY ARTIST TEST=========');
 console.log(findByArtist( myCollection, "SIK-K"));
 console.log(findByArtist( myCollection, "Taeyeon"));
-
-
-/* ATTEMPT
-  for(let i=0; i<anArray.length; i++){
-    let newArtistArray = [];
-    let collection = anArray[i];
-    let lookingForArtist;
-    if(collection.artist === lookingForArtist){
-      console.log(newArtistArray.push(collection));
-    }// end of if statment
-  }
-  return newArtistArray = [];
-}
-
-console.log(findByArtist(btsObject, "bts")); */
-
-
+console.log(findByArtist( myCollection, "Winner"));
+console.log(findByArtist( myCollection, "2PM"));
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
